@@ -14,7 +14,7 @@ rnd_clf = RandomForestClassifier()
 svm_clf = SVC()
 clf_list = [log_clf, rnd_clf, svm_clf]
 
-def ml_clf(X_train, y_train, X_test, y_test, clf_list):
+def ml_clf(X_train, y_train, X_test, y_test, clf_list=clf_list):
   score=[]
   name=[]
   score_frame=pd.DataFrame()
@@ -28,22 +28,19 @@ def ml_clf(X_train, y_train, X_test, y_test, clf_list):
   score_frame["score"]=score
   return score_frame.sort_values(by=["score"])
 
-
-def dl_baseline(X_train, y_train, X_test, y_test, epoch_n, batch_n):
-    input_dim = X_train.shape[0]
-    layer_unit = input_dim*2
-    hidden = int(input_dim / 2)
-    # callbacks i.e. early stopping 
-    callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=2)
-	# create model
-	model = Sequential()
-	model.add(Dense(layer_unit, input_dim=input_dim, activation='relu'))
-	model.add(Dense(hidden, activation='relu'))
-	model.add(Dense(1, activation='sigmoid'))
-	# Compile model
-	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    # fit 
-    history=model.fit(X_train, y_train, epochs=epoch_n, batch_size=batch_n, validation_data=(X_test, y_test),callbacks=[callback])
-	return history
-
-
+def dl_clf(X_train, y_train, X_test, y_test, epoch_n, batch_n):
+  input_dim = X_train.shape[0]
+  layer_unit = input_dim*2
+  hidden = int(input_dim / 2)
+  # early stopping
+  es = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=1)
+  # create model
+  model = Sequential()
+  model.add(Dense(layer_unit, input_dim=input_dim, activation="relu"))
+  model.add(Dense(hidden, activation="relu"))
+  model.add(Dense(1, activation="sigmoid"))
+  # compile model
+  model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+  # fit
+  history = model.fit(X_train, y_train, epochs=epoch_n, batch_size=batch_n, validation_data=(X_test, y_test),callbacks=[es])
+  return history 
