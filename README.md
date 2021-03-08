@@ -99,7 +99,7 @@ The RandomForestClassifier, and in general all tree-based algorithms, is fairly 
 
 ### SMOTE
 
-We use the implementations provided by the [imbalanced-learn Python library](https://github.com/scikit-learn-contrib/imbalanced-learn). With the SMOTE technique we are able to improve the accuracy scores of *SVC* and *RandomForestClassifier*:
+We use the implementations provided by the [imbalanced-learn Python library](https://github.com/scikit-learn-contrib/imbalanced-learn). With the SMOTE technique we are able to improve the accuracy scores of *SVC* and *RandomForestClassifier*, but unfortunately not for the LogisticRegression:
 
 <br />
 
@@ -111,9 +111,11 @@ We use the implementations provided by the [imbalanced-learn Python library](htt
 
 <br />
 
+
 ## Further Thoughts
 Further thoughts on how to improve the accuracy score:
 - Preprocessing:
   - Use a different encoder for the categorical features
   - Impute most frequent value for all the missing values instead of adding the label "unknown"
+- Hyperparamter tuning
 - Apply a neural network to fit the data e.g. Autoencoder
