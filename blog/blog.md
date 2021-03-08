@@ -50,14 +50,19 @@ It is intersting to see if people who had a recent job change are likely to seek
 ![last_new_job1](last_new_job.png)
 
 
-Almost half of the people who are looking out for job change have only one year of difference between their current job and previus job. Perhaps they where not happy where they worked. Or perhaps the company they worked at, where not happy with them and thus the participate at the training course to improve.
+Almost half of the people who are looking out for job change have only one year of difference between their current job and previous job. Perhaps they where not happy where they worked. Or perhaps the company they worked at, where not happy with them and thus the participate at the training course to improve.
 
 ## What is the City Development Index?
 The City Development Index (CDI) was developed for the Second United Nations Conference on Human Settlements (Habitat II) and measures the level of development in cities. 
 
 ![cdi](cdi.png)
 
- Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have less job opportunity
+ Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have less job opportunity. This observation is also confirmed when looking at the correlation between the target variable and the CDI variable which is -0.342- 
 
  ## Conclusion
 
+Looking at the above numbers and plots, the candidates who are most likley to look for a new job: 
+- have relevant experience,
+- are graduates with STEM as major discipline,
+- come from cities with a low CDI ,
+- have had a job change within a year.
