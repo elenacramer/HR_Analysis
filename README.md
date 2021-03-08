@@ -1,16 +1,24 @@
-# Who is looking for a new job?
+# Applying SMOTE to an Imbalanced Classification Problem
+
+Classification is one of the most common machine learning problems. A common issues found in datasets that are used for classification is imbalanced classes issue. Data imbalance usually reflects an unequal distribution of classes within a dataset. 
+
+The challenge of working with an imbalanced dataset is that most machine learning techniques will likely ignore, and in turn have poor performance on, although typically it is performance on the minority class that is most important. 
+
+
+One approach to addressing imbalanced datasets is to oversample the minority class. The simplest approach involves duplicating examples in the minority class, although these examples don’t add any new information to the model. Instead, new examples can be synthesized from the existing examples. This is a type of data augmentation for the minority class and is referred to as the *Synthetic Minority Oversampling Technique*, or *SMOTE* for short.
+
+Here we will apply some common machine learning models to an imbalanced dataset both with and without the SMOTE technique and compare the results. 
+
+All the required packages can be found in the file **pyproject.toml**.
+
+## Dataset
 
 A company which is active in Big Data and Data Science wants to hire data scientists among people who successfully pass some courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really wants to work for them, or are most likely to look for a job, after completing the training. 
 
 
-## Dataset 
 Information related to demographics, education, experience and features related to training as well are in hands from candidates signup and enrollment. The dataset, which is devided into train and test sets, can be found here [kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv).
 
-
-## Task 
-The goal of this task is to build model(s) that use the given features to predict the probability of a candidate looking for a new job or will work for the company. In particular, we have a binary classification problem; 1: looking for a job, 0: not looking for a job.
-
-All the required packages are listed in **pyproject.toml**.
+The goal is to predict the probability of a candidate looking for a new job or will work for the company. 
 
 
 ## Preprocessing 
@@ -40,7 +48,7 @@ There are in total 33.380 rows, i.e. enrollees which participated in the trainin
 
 <br />
 
-The dataset is imbalanced, meaning we have an unequal class distribution:
+We have an unequal class distribution:
 
 <br />
 
@@ -88,11 +96,8 @@ We can improve our scores by normalizing the data before it is fitted to the mod
 <br />
 
 ### SMOTE
-The challenge of working with an imbalanced dataset is that most machine learning techniques will likely ignore, and in turn have poor performance on, the minority class, which is in our case the class 0 (enrollee not looking for a job). 
 
-One approach to addressing imbalanced datasets is to oversample the minority class. The simplest approach involves duplicating examples in the minority class, although these examples don’t add any new information to the model. Instead, new examples can be synthesized from the existing examples. This is a type of data augmentation for the minority class and is referred to as the *Synthetic Minority Oversampling Technique*, or *SMOTE* for short.
-
-We use the implementations provided by the [imbalanced-learn Python library](https://github.com/scikit-learn-contrib/imbalanced-learn). With the SMOTE technique we are able to improve the accuracy scores of *SVC* and *RandomForestClassifier*.
+We use the implementations provided by the [imbalanced-learn Python library](https://github.com/scikit-learn-contrib/imbalanced-learn). With the SMOTE technique we are able to improve the accuracy scores of *SVC* and *RandomForestClassifier*:
 
 <br />
 
