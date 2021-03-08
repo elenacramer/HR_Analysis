@@ -16,12 +16,13 @@ The goal of this task is to build model(s) that use the given features to predic
 There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. The dataset is imbalanced and 10 features are categorical, some with high cardinality.
 
 <br />
-| Features        | dtypes      | unique values| isnull sum  | isnull % |
-| --------------- |:-----------:| ------------:| -----------:|---------:|
-|enrollee_id |	int64	|19158	|0	|0.00|
-|city|	object|	123|	0|	0.00|
-|city_development_index	|float64|	93|	0|	0.00|
-|gender	|object|	4	|4508	|23|.53|
+
+| Features        | dtypes      | unique values | isnull sum  | isnull % |
+| --------------- |:-----------:| -------------:| -----------:|---------:|
+|enrollee_id      |	int64	       |19158	|         0	|          0.00|
+|city|	object|	123|	0 |	0.00|
+|city_development_index	| float64 |	93|	0|	0.00|
+|gender	|object|	4	| 4508	|23|.53|
 |relevent_experience|	object|	2	|0|	0.00|
 |enrolled_university|	object|	4|	386|	2.01|
 |education_level|	object|	6	|460	|2.40|
