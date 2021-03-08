@@ -43,10 +43,20 @@ It comes to no suprise that most people, or around 80%, who are looking for new 
 
 ## Did candidates work before joining the training? 
 
-Since Graduates are most likley to look for a job opportunity, we might expect that the most likely candidates open to a new job are the ones having no work experience. It is intersting to see if people who had a recent job change are likely to seek a new job. 
+It is intersting to see if people who had a recent job change are likely to seek again a new job. 
 
 
 ![last_new_job1](last_new_job.png)
 
 
 Almost half of the people who are looking out for job change have only one year of difference between their current job and previus job. Perhaps they where not happy where they worked. Or perhaps the company they worked at, where not happy with them and thus the participate at the training course to improve.
+
+## What is the City Development Index?
+The City Development Index (CDI) was developed for the Second United Nations Conference on Human Settlements (Habitat II) and measures the level of development in cities. 
+
+![cdi](cdi.png)
+
+ Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have less job opportunity
+
+ ## Conclusion
+ 
