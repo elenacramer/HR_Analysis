@@ -9,21 +9,21 @@ One approach to addressing imbalanced datasets is to oversample the minority cla
 
 Here we will apply some common machine learning models to an imbalanced dataset both with and without the SMOTE technique and compare the results. 
 
-All the required packages can be found in the file **pyproject.toml**.
+All the required packages can be found in the file [pyproject.toml](https://github.com/elenacramer/HR_Analysis/blob/main/pyproject.toml).
 
 ## Dataset
 
 A company which is active in Big Data and Data Science wants to hire data scientists among people who successfully pass some courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really wants to work for them, or are most likely to look for a job, after completing the training. 
 
 
-Information related to demographics, education, experience and features related to training as well are in hands from candidates signup and enrollment. The dataset, which is devided into train and test sets, can be found here [kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv).
+Information related to demographics, education, experience and features related to training as well are in hands from candidates signup and enrollment. The dataset, which is devided into train and test sets, can be found here [Kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv).
 
 The goal is to predict the probability of a candidate looking for a new job or will work for the company. 
 
 
 ## Preprocessing 
 
-All the preprocessing steps can be found in the notebook **hr_analytics_ED.ipynb**. 
+All the preprocessing steps can be found in the notebook [hr_analytics_ED.ipynb](https://github.com/elenacramer/HR_Analysis/blob/main/hr_analytics_ED.ipynb). 
 
 There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. We have a total of 10 categorical features, some with high cardinality, and 4 numerical feautres. 
 
@@ -69,31 +69,33 @@ We use the *LabelEncoder()* from *sklearn* to impute for the categorical feature
 
 
 ## Modelling
-The modelling part can be found in the notebook **hr_analytic_modelling.ipynb**. 
+The modelling part can be found in the notebook [hr_analytic_modelling.ipynb](https://github.com/elenacramer/HR_Analysis/blob/main/hr_analytics_modelling.ipynb). 
 
-We start by applying three common machine learning models; *LogisticRegression, RandomForestClassifier, SVC*. We then compute the accuracy score of the prediction made on a testset:
+We start by applying three common machine learning models; *LogisticRegression, RandomForestClassifier, SVC*. The following table shows the accuracy score of the prediction made on a testset:
 
 <br />
 
 |ML model  |	score | 
 |:--------:|:------:|
-| SVC|	0.748086|	
-|LogisticRegression	| 0.765658 |
-|RandomForestClassifier	| 0.777140 | 
+| SVC|	0.75|	
+|LogisticRegression	| 0.77 |
+|RandomForestClassifier	| 0.78 | 
 
 <br />
 
-We can improve our scores by normalizing the data before it is fitted to the models:
+We can improve our scores for SVC and LogisticRegression by normalizing the data before it is fitted to the models:
 
 <br />
 
-|ML model  | score with normalized| 
+|ML model  | score with normalized data| 
 |:--------:|:------:|
-| SVC|	0.765484|	
-|LogisticRegression	| 0.766875|
-|RandomForestClassifier	| 0.778706| 
+| SVC|	0.77 |	
+|LogisticRegression	| 0.77|
+|RandomForestClassifier	| 0.78| 
 
 <br />
+
+The RandomForestClassifier, and in general all tree-based algorithms, is fairly insensitive to the scale of the features. The classifier consists of decision tree's and a decision tree is only splitting a node based on a single feature. The decision tree splits a node on a feature that increases the homogeneity of the node. This split on a feature is not influenced by other features. 
 
 ### SMOTE
 
@@ -101,11 +103,11 @@ We use the implementations provided by the [imbalanced-learn Python library](htt
 
 <br />
 
-|ML model  |		score with normalized| score with normalized and SMOTE |
+|ML model  |		score with normalized data| score with normalized and SMOTE |
 |:--------:|:-----------------------:|:-------------------------------:|
-| SVC|	0.734732|	0.786766|
-|LogisticRegression	| 0.766875| 0.734732|
-|RandomForestClassifier	| 0.778706| 0.834280|
+| SVC|	0.77 |	0.79 |
+|LogisticRegression	| 0.77| 0.74|
+|RandomForestClassifier	| 0.78 | 0.83 |
 
 <br />
 
