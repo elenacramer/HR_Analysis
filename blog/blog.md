@@ -1,3 +1,4 @@
+![looking_for_job](looking_for_job.jpg)
 # Who is looking for a new job?
 
 A company which is active in Data Science wants to hire data scientists among people who successfully pass training courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really want to work for them, or are most likely to look for a job, after completing the training.
@@ -59,4 +60,4 @@ The City Development Index (CDI) was developed for the Second United Nations Con
  Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have less job opportunity
 
  ## Conclusion
- 
+
