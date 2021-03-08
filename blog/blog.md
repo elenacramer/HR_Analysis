@@ -25,7 +25,7 @@ One might assume that people with no relevant experience in the field of data sc
 
 <br />
 
-![Relevant_Experience](relevant_experience.png)
+![relevant_experience](relevant_experience.png)
 
 <br />
 
@@ -38,7 +38,7 @@ Most enrollee have relevant experience in the field. Among those with relevant e
 
 <br />
 
-[blog/education_target1](education_target1.png)
+[education_target1](education_target1.png)
 
 <br />
 
@@ -50,7 +50,7 @@ Let's dig a little bit deeper and have a look at the major disciplines of the pa
 
 <br />
 
-[blog/major_discipline_target1](major_discipline_target1.png)
+[major_discipline_target1](major_discipline_target1.png)
 
 <br />
 
