@@ -10,6 +10,8 @@ Information related to demographics, education, experience and features related 
 ## Task 
 The goal of this task is to build model(s) that use the given features to predict the probability of a candidate looking for a new job or will work for the company. In particular, we have a binary classification problem; 1: looking for a job, 0: not looking for a job.
 
+All the required packages are listed in **pyproject.toml**.
+
 
 ## Preprocessing 
 
