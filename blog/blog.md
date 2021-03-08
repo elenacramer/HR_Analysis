@@ -2,15 +2,12 @@
 
 <br />
 
-A training institute which conducts training for analytics/ data science wants to expand their business to manpower recruitment, data science only, as well. A large number of candidates signup for their training. The company wants to connect these enrollees with their clients who are looking to hire employees working in the same domain. Before that, it is important to know which of these candidates are really looking for a new employment. This helps to reduce the cost and time as well as the quality of training or planning the courses and categorization of candidates.
+A company which is active in Big Data and Data Science wants to hire data scientists among people who successfully pass some courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really wants to work for them, or are most likely to look for a job, after completing the training.
 
 <br />
 
-Information related to demographics, education, experience and features related to training as well are in hands. In total 33.380 enrollees participated in the training while only 2.425, or around 7%, of them where actually looking for a new job. The dataset can be found here [kaggle](https://www.kaggle.com/aswathrao/hr-analysis). We will use the given information to analyse the employees and see who is looking for a job change. 
+Information related to demographics, education, experience and features related to training as well are in hands. In total 33.380 enrollees participated in the training while 25% of them where actually looking for a new job. The dataset can be found here [kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv). We will use the given information to analyse the employees and see who is looking for a job change. 
 
-<br />
-
-*Notation:* the feature **target** describes if someone is looking for a new job or not; 0 – not looking, 1 – looking. 
 
 <br />
 
