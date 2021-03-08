@@ -15,7 +15,7 @@ All the required packages are listed in **pyproject.toml**.
 
 ## Preprocessing 
 
-All the preproccessing steps can be found in the notebook **hr_analytics_ED.ipynb**. 
+All the preprocessing steps can be found in the notebook **hr_analytics_ED.ipynb**. 
 
 There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. We have a total of 10 categorical features, some with high cardinality, and 4 numerical feautres. 
 
@@ -106,5 +106,7 @@ We use the implementations provided by the [imbalanced-learn Python library](htt
 
 ## Further Thoughts
 Further thoughts on how to improve the accuracy score:
-- Use a different encoder for the categorical features
-- Apply a neural network to fit the data e.g. Autoencoder.
+- Preprocessing:
+  - Use a different encoder for the categorical features
+  - Impute most frequent value for all the missing values instead of adding the label "unknown"
+- Apply a neural network to fit the data e.g. Autoencoder
