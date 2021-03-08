@@ -1,6 +1,6 @@
 # Applying SMOTE to an Imbalanced Classification Problem
 
-Classification is one of the most common machine learning problems. A common issues found in datasets that are used for classification is imbalanced classes issue. Data imbalance usually reflects an unequal distribution of classes within a dataset. 
+Classification is one of the most common machine learning problems. A common issue found in datasets that are used for classification is imbalance. Data imbalance usually reflects an unequal distribution of classes within a dataset. 
 
 The challenge of working with an imbalanced dataset is that most machine learning techniques will likely ignore, and in turn have poor performance on, although typically it is performance on the minority class that is most important. 
 
