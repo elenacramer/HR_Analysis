@@ -1,10 +1,10 @@
 # Who is looking for a new job?
 
-A training institute which conducts training for analytics/ data science wants to expand their business to manpower recruitment, data science only, as well. A large number of candidates signup for their training. The company wants to connect these enrollees with their clients who are looking to hire employees working in the same domain. Before that, it is important to know which of these candidates are really looking for a new employment. This helps to reduce the cost and time as well as the quality of training or planning the courses and categorization of candidates.
+A company which is active in Big Data and Data Science wants to hire data scientists among people who successfully pass some courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really wants to work for them, or are most likely to look for a job, after completing the training. 
 
 
 ## Dataset 
-Information related to demographics, education, experience and features related to training as well are in hands. The dataset, which is devided into train and test sets, can be found here [kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv).
+Information related to demographics, education, experience and features related to training as well are in hands from candidates signup and enrollment. The dataset, which is devided into train and test sets, can be found here [kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv).
 
 
 ## Task 
@@ -13,7 +13,9 @@ The goal of this task is to build model(s) that use the given features to predic
 
 ## Preprocessing 
 
-There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. The dataset is imbalanced and 10 features are categorical, some with high cardinality.
+All the preproccessing steps can be found in the notebook **hr_analytics_ED.ipynb**. 
+
+There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. We have a total of 10 categorical features, some with high cardinality, and 4 numerical feautres. 
 
 <br />
 
@@ -36,17 +38,71 @@ There are in total 33.380 rows, i.e. enrollees which participated in the trainin
 
 <br />
 
-All the preproccessing steps can be found in the notebook **hr_analytics_ED.ipynb**. 
+The dataset is imbalanced, meaning we have an unequal class distribution:
+
+<br />
+
+| Class 0 (not looking for a job) | Class 1 (looking for a job) |
+|:-------------------------------:|:---------------------------:|
+| 75%                             | 25%                         | 
+
+<br />
+
 
 ### Missing Values
-If we would just drop all rows with missing values, we would end up loosing around 50% of the data. Thus, we apply the following strategy:
-- All feautures with missing values less then 3%, in particular, *enrolled_university, education_level, experience, last_new_job*, will be filled with the most current value. 
+If we would just drop all rows with missing values, we would end up loosing 47% of the data, that is, almost half. Since data is essential, we apply the following strategy:
+- All feautures with missing values less then 3%, in particular, *enrolled_university, education_level, experience, last_new_job*, will be filled with the most frequent value. 
 - All other missing values will be labeled as *unknown*. 
 
 ### Categorical features
 We use the *LabelEncoder()* from *sklearn* to impute for the categorical features.
 
-## Baselinemodels 
-As a baseline we will apply *logistregression* as well as a simple neural network with one hidden layer. 
 
+## Modelling
+The modelling part can be found in the notebook **hr_analytic_modelling.ipynb**. 
 
+We start by applying three common machine learning models; *LogisticRegression, RandomForestClassifier, SVC*. We then compute the accuracy score of the prediction made on a testset:
+
+<br />
+
+|ML model  |	score | 
+|:--------:|:------:|
+| SVC|	0.748086|	
+|LogisticRegression	| 0.765658 |
+|RandomForestClassifier	| 0.777140 | 
+
+<br />
+
+We can improve our scores by normalizing the data before it is fitted to the models:
+
+<br />
+
+|ML model  | score with normalized| 
+|:--------:|:------:|
+| SVC|	0.765484|	
+|LogisticRegression	| 0.766875|
+|RandomForestClassifier	| 0.778706| 
+
+<br />
+
+### SMOTE
+The challenge of working with an imbalanced dataset is that most machine learning techniques will likely ignore, and in turn have poor performance on, the minority class, which is in our case the class 0 (enrollee not looking for a job). 
+
+One approach to addressing imbalanced datasets is to oversample the minority class. The simplest approach involves duplicating examples in the minority class, although these examples don’t add any new information to the model. Instead, new examples can be synthesized from the existing examples. This is a type of data augmentation for the minority class and is referred to as the *Synthetic Minority Oversampling Technique*, or *SMOTE* for short.
+
+We use the implementations provided by the [imbalanced-learn Python library](https://github.com/scikit-learn-contrib/imbalanced-learn). With the SMOTE technique we are able to improve the accuracy scores of *SVC* and *RandomForestClassifier*.
+
+<br />
+
+|ML model  |		score with normalized| score with normalized and SMOTE |
+|:--------:|:-----------------------:|:-------------------------------:|
+| SVC|	0.734732|	0.786766|
+|LogisticRegression	| 0.766875| 0.734732|
+|RandomForestClassifier	| 0.778706| 0.834280|
+
+<br />
+
+## Further Thoughts
+Further thoughts on how to improve the accuracy score:
+- Use a different encoder for the categorical features
+- Apply a neural network to fit the data e.g. Autoencoder.
