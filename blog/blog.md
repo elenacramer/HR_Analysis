@@ -3,8 +3,6 @@
 
 A company which is active in Data Science wants to hire data scientists among people who successfully pass training courses which are conducted by the company. A large number of candidates signup for their training. To reduce the cost and time, as well as the quality of the training, the company wants to know which of these candidates really want to work for them, or are most likely to look for a job, after completing the training.
 
-<br />
-
 Information related to demographics, education, experience and features related to training as well are in hands. The dataset can be found here [Kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv). We will use the given information to analyse the enrollees and see who is looking for a job change. 
 
 In total 33.380 enrollees participated in the training, most of them beeing male. Around 25% people are lookging for a job change. 
@@ -27,16 +25,12 @@ Most candidates have relevant experience in the field. Among those with relevant
 
 ![education_target1](education_target1.png)
 
-
 Among the enrolles who are looking for a new job, it is not a suprise that most of them are Graduates. They have successfully completed a course of study or training and are ready to work.
-
-<br />
 
 Let's dig a little bit deeper and have a look at the major disciplines of the participants looking for a job. 
 
 
 ![major_discipline_target1](major_discipline_target1.png)
-
 
 
 It comes to no suprise that most people, or around 80%, who are looking for new job are STEM degree holders. Thus it is possible that they are more likely to be candidates for a job at the company.  
@@ -46,14 +40,11 @@ It comes to no suprise that most people, or around 80%, who are looking for new 
 
 It is intersting to see if people who had a recent job change are likely to seek again a new job. 
 
-
 ![last_new_job1](last_new_job.png)
-
 
 Almost half of the people who are looking out for job change have only one year difference between their current job and previous job. This looks a bit odd. To investigate this information further, we can have a look at the amount of experience of the candidates both for all who are looking for a job and for those who have one year difference between their jobs.
 
 ![experience1](experience1.png)
-
 
 From these plots we see similar distributions. Most candidates who are looking for a job have 2-5 and +20 years experience. So perhaps the candidates who had only one year difference between their jobs where unhappy where they worked and thus changed the company. 
 
