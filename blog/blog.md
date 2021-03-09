@@ -8,9 +8,6 @@ Information related to demographics, education, experience and features related 
 In total 33.380 enrollees participated in the training, most of them beeing male. Around 25% people are lookging for a job change. 
 {:.center}
 ![gender_overview](gender_overview.png)
-.center {
-  text-align: center;
-}
 
 
 ## Do experienced people tend to look for a new job?
