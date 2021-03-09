@@ -50,9 +50,14 @@ It is intersting to see if people who had a recent job change are likely to seek
 ![last_new_job1](last_new_job.png)
 
 
-Almost half of the people who are looking out for job change have only one year of difference between their current job and previous job. Perhaps they where not happy where they worked. Or perhaps the company they worked at, where not happy with them and thus the participate at the training course to improve.
+Almost half of the people who are looking out for job change have only one year difference between their current job and previous job. This looks a bit odd. To investigate this information further, we can have a look at the amount of experience of the candidates both for all who are looking for a job and for those who have one year difference between their jobs.
 
-## What is the City Development Index?
+![experience1](experience1.png)
+
+
+From these plots we see similar distributions. Most candidates who are looking for a job have 2-5 and +20 years experience. So perhaps the candidates who had only one year difference between their jobs where unhappy where they worked and thus changed the company. 
+
+## What is the City Development Index? Does it matter here?
 The City Development Index (CDI) was developed for the Second United Nations Conference on Human Settlements (Habitat II) and measures the level of development in cities. 
 
 ![cdi](cdi.png)
