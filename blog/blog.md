@@ -14,8 +14,7 @@ In total 33.380 enrollees participated in the training, most of them beeing male
 
 One might assume that people with no relevant experience in the field of data science participate in the training with a job change in mind. 
 
-
-![relevant_experience2](relevant_experience2.png)
+![relevant_experience](relevant_experience.png)
 
 
 Most candidates have relevant experience in the field. Among those with relevant experience, 15.5% are looking for a new job. While among those with no relevant experience, 9.5% are looking for a new job. Hence, we see that the difference is not as big as one might assume. 
@@ -52,7 +51,7 @@ The City Development Index (CDI) was developed for the Second United Nations Con
 
 ![cdi](cdi.png)
 
- Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have less job opportunity. This observation is also confirmed when looking at the correlation between the target variable and the CDI variable which is -0.342- 
+ Average CDI for people who are looking for job change is less. Hence, people from cities with an higher development index are less likely to look for job change. A reason for that might be that cities with a low CDI have fewer job opportunities. This observation is also confirmed when looking at the correlation between the target variable and the CDI variable which is -0.342. 
 
  ## Conclusion
 
