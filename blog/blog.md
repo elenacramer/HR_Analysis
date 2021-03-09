@@ -6,7 +6,7 @@ A company which is active in Data Science wants to hire data scientists among pe
 Information related to demographics, education, experience and features related to training as well are in hands. The dataset can be found here [Kaggle](https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists?select=aug_train.csv). We will use the given information to analyse the enrollees and see who is looking for a job change. 
 
 In total 33.380 enrollees participated in the training, most of them beeing male. Around 25% people are lookging for a job change. 
-{:.center}
+
 ![gender_overview](gender_overview.png)
 
 
