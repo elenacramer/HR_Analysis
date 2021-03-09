@@ -118,4 +118,4 @@ Further thoughts on how to improve the accuracy score:
   - Use a different encoder for the categorical features
   - Impute most frequent value for all the missing values instead of adding the label "unknown"
 - Hyperparamter tuning
-- Apply a neural network to fit the data e.g. Autoencoder
+- Different approah to handle the imbalanced dataset
