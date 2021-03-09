@@ -9,11 +9,11 @@ In total 33.380 enrollees participated in the training, most of them beeing male
 
 ![gender_overview](gender_overview.png)
 
-## DO experienced candidates tend to look for a new job?
+## Do experienced candidates tend to look for a new job?
 
 One might assume that people with no relevant experience in the field of data science participate in the training with a job change in mind. Why else enrolle, right?
 
-![relevant_exp](relevant_exp.png)
+![relevant_exp](rel_exp.png)
 
 Most candidates have relevant experience in the field. Among those with relevant experience, 15.5% are looking for a new job. While among those with no relevant experience, 9.5% are looking for a new job. Thus, the difference is not as big as one might assume. 
 
