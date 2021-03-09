@@ -14,7 +14,7 @@ In total 33.380 enrollees participated in the training, most of them beeing male
 
 One might assume that people with no relevant experience in the field of data science participate in the training with a job change in mind. 
 
-![relevant_experience](relevant_experience.png)
+![relevant_experience2](relevant_experience2.png)
 
 
 Most candidates have relevant experience in the field. Among those with relevant experience, 15.5% are looking for a new job. While among those with no relevant experience, 9.5% are looking for a new job. Hence, we see that the difference is not as big as one might assume. 
