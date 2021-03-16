@@ -5,9 +5,9 @@
 - [Dataset](##Dataset)
 - [Results](##Results)
 - [Modelling](##Modelling)
-  - [Preprocessing](###Preprocessing)
-  - [ML Models Result](###ML Models Result)
-  - [Further Thoughts](###Further Thoughts)
+  - [Preprocessing](###PrePro)
+  - [ML Models Result](###MLResult)
+  - [Further Thoughts](###FT)
 
 ## Installation 
 All the required packages can be found in the file [pyproject.toml](https://github.com/elenacramer/HR_Analysis/blob/main/pyproject.toml). The code should run with no issues using Python versions 3.*.
@@ -48,7 +48,7 @@ Here we will apply some common machine learning models to an imbalanced dataset 
 The goal is to predict the probability of a candidate looking for a new job or will work for the company. 
 
 
-### Preprocessing  
+### Preprocessing  <a name="PrePro"></a>
 
 There are in total 33.380 rows, i.e. enrollees which participated in the training, and 14 features. We have a total of 10 categorical features, some with high cardinality, and 4 numerical feautres. 
 
@@ -90,7 +90,7 @@ If we would just drop all rows with missing values, we would end up loosing 47% 
 
 We use the *LabelEncoder()* from *sklearn* to impute for the categorical features.
 
-### ML Models Result
+### ML Models Result <a name="MLResults"></a>
 
 We apply three common machine learning models; *LogisticRegression, RandomForestClassifier, SVC*. We compare the accuracy score of the prediction made on a test set before and after normalizing and after applying the SMOTE technique:
 <br />
@@ -104,7 +104,7 @@ We apply three common machine learning models; *LogisticRegression, RandomForest
 <br />
 
 
-### Further Thoughts
+### Further Thoughts <a name="FT"></a>
 Further thoughts on how to improve the accuracy score:
 - Preprocessing:
   - Use a different encoder for the categorical features
