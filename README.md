@@ -1,4 +1,13 @@
-# Applying SMOTE to an Imbalanced Classification Problem
+## Table of Contents
+
+1. [Installation ](##Installation )
+2. [Project Motivation](##Project Motivation)
+3. [Dataset](##Dataset)
+4. [Results](##Results)
+5. [Modelling](##Modelling)
+6.  [Preprocessing](###Preprocessing)
+7.  [ML Models Result](###ML Models Result)
+8.  [Further Thoughts](###Further Thoughts)
 
 ## Installation 
 All the required packages can be found in the file [pyproject.toml](https://github.com/elenacramer/HR_Analysis/blob/main/pyproject.toml). The code should run with no issues using Python versions 3.*.
@@ -75,7 +84,6 @@ We have an unequal class distribution:
 <br />
 
 
-### Missing Values & Categorical Features
 If we would just drop all rows with missing values, we would end up loosing 47% of the data, that is, almost half. Since data is essential, we apply the following strategy:
 - All feautures with missing values less then 3%, in particular, *enrolled_university, education_level, experience, last_new_job*, will be filled with the most frequent value. 
 - All other missing values will be labeled as *unknown*. 
