@@ -1,18 +1,18 @@
 ## Table of Contents
 
-1. [Installation ](##Installation )
-2. [Project Motivation](##Project Motivation)
-3. [Dataset](##Dataset)
-4. [Results](##Results)
-5. [Modelling](##Modelling)
-6.  [Preprocessing](###Preprocessing)
-7.  [ML Models Result](###ML Models Result)
-8.  [Further Thoughts](###Further Thoughts)
+- [Installation ](##Installation )
+- [Project Motivation](##Project Motivation)
+- [Dataset](##Dataset)
+- [Results](##Results)
+- [Modelling](##Modelling)
+  - [Preprocessing](###Preprocessing)
+  - [ML Models Result](###ML Models Result)
+  - [Further Thoughts](###Further Thoughts)
 
 ## Installation 
 All the required packages can be found in the file [pyproject.toml](https://github.com/elenacramer/HR_Analysis/blob/main/pyproject.toml). The code should run with no issues using Python versions 3.*.
 
-## Project Motivation 
+## Project Motivation <a name="Project Motivation"></a>
 For this project, we were interestested in using Kaggle dataset on HR analytics to better understand who is looking for a new job, in particular: 
 
 - Do experienced candidates tend to look for a new job?
