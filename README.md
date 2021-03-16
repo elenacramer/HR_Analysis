@@ -106,8 +106,8 @@ We use the implementations provided by the [imbalanced-learn Python library](htt
 |ML model  |		score with normalized data| score with normalized and SMOTE |
 |:--------:|:-----------------------:|:-------------------------------:|
 | SVC|	0.77 |	0.79 |
-|LogisticRegression	| 0.77| 0.73|
-|RandomForestClassifier	| 0.78 | 0.84 |
+|LogisticRegression	| 0.77| 0.74|
+|RandomForestClassifier	| 0.78 | 0.83 |
 
 <br />
 
